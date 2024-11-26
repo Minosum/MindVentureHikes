@@ -1,0 +1,75 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align items to the bottom */
+    padding: 1rem 2rem;
+    height: 750px; /* Adjust height as needed */
+    background: url('/images/background.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire navbar */
+    color: white;
+    text-align: center;
+    position: relative; /* To ensure positioning of elements */
+  }
+  
+  /* Big Centered Text */
+  .navbar h1 {
+    font-size: 5rem; /* Adjust for the desired size */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+    z-index: 2; /* Ensure text appears above other elements */
+    position: absolute; /* Position text absolutely to be centered */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfectly center the text */
+    color: #0D652D; /* Set link color */
+  }
+  
+  /* Navbar Logo */
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1; /* Ensure the logo stays above the background */
+  }
+  
+  /* Navigation Links */
+  .navLinks {
+    display: flex;
+    gap: 1.5rem;
+    position: absolute;
+    bottom: 1rem; /* Align links to the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the nav links horizontally */
+    z-index: 1; /* Ensure links are above the background */
+  }
+  
+  /* Navbar Links Styling */
+  .navbar .navLinks a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar .navLinks a:hover {
+    color: #ffcc00; /* Hover effect */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+      height: auto; /* Let the height adjust on smaller screens */
+    }
+  
+    .navbar h1 {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+  
+    .navLinks {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  
