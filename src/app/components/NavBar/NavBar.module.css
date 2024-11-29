@@ -3,17 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* Align items to the bottom */
-    padding: 1rem 2rem;
     height: 750px;
-    /* Adjust height as needed */
     background: url('/images/background.jpg') no-repeat center center;
     background-size: cover;
-    /* Ensure the image covers the entire navbar */
     color: white;
     text-align: center;
     position: relative;
-    /* To ensure positioning of elements */
 }
 
 .titleAnimation {
@@ -35,48 +30,36 @@
     0% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         visibility: hidden;
     }
 }
 
-/* Big Centered Text */
+
 .navTitle {
     font-size: 5rem;
-    /* Adjust for the desired size */
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    /* Add shadow for better contrast */
     z-index: 2;
-    /* Ensure text appears above other elements */
     position: absolute;
-    /* Position text absolutely to be centered */
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Perfectly center the text */
     color: white;
-    /* Set link color */
     width: 100%;
     display: flex;
     background: #0d652dab;
-    padding: 4.5rem 4rem;
     line-height: 120%;
     flex-direction: column;
 }
 
-
-/* Navbar Logo */
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
     z-index: 1;
-    /* Ensure the logo stays above the background */
 }
 
-/* Navigation Links */
 .navLinks {
     display: flex;
     gap: 3rem;
@@ -84,18 +67,14 @@
     bottom: 0rem;
     left: 50%;
     transform: translateX(-50%);
-    /* Center the nav links horizontally */
     z-index: 1;
-    /* Ensure links are above the background */
     justify-content: center;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.61);
     height: 100px;
     align-items: center;
-
 }
 
-/* Navbar Links Styling */
 .navbar .navLinks a {
     text-decoration: none;
     color: white;
@@ -103,54 +82,80 @@
     transition: color 0.3s;
     border-left: solid 10px #0D652D;
     padding-left: 10px;
-
 }
 
 .navbar .navLinks a:hover {
     color: #ffcc00f1;
-    /* Hover effect */
     text-decoration: underline;
-
 }
 
-@media (max-width: 1400px) {
-    .navLinks a {
-        font-size: 24px !important;
-    }
+/* Burger Menu Styles */
+.burgerMenu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.burgerMenu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.burgerMenu.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+    background-color: white;
+}
+
+.burgerMenu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burgerMenu.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-10px, -10px);
+    background-color: white;
 }
 
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .navbar {
-        flex-direction: column;
-        text-align: center;
+        background-color: black;
     }
 
-    .navTitle {
-        padding: 3rem;
-    }
-
-    .navbar h1 {
-        font-size: 2rem;
-        /* Adjust font size for smaller screens */
+    .burgerMenu {
+        display: flex;
     }
 
     .navLinks {
-        flex-direction: column;
-        gap: 1rem;
-        display: flex;
-        position: absolute;
-        bottom: 5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-        justify-content: center;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.61);
-        height: 215px;
-        align-items: center;
+        display: none;
     }
 
+    .navLinks.mobileMenuOpen {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        width: 200%;
+        height: 100vh;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        z-index: 5;
+    }
 
+    .navLinks.mobileMenuOpen a {
+        font-size: 24px;
+        color: white;
+    }
+
+    .menuOpen {
+        background-color: black;
+    }
 }
