@@ -1,0 +1,35 @@
+.navLinks {
+    display: flex;
+    gap: 3rem;
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100px;
+    align-items: center;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    transition: color 0.3s;
+    border-left: solid 10px #0D652D;
+    padding-left: 10px;
+}
+
+.navLinks a:hover {
+    color: #ffcc00f1;
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    .navLinks {
+        flex-direction: column;
+        bottom: 50%;
+    }
+}
