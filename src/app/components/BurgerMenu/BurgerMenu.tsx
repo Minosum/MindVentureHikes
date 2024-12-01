@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './BurgerMenu.module.css'
 import NavLinks from '../NavLinks/NavLinks'
 
@@ -9,6 +9,25 @@ const BurgerMenu = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    useEffect(() => {
+        // Function to handle scroll event
+        const handleScroll = () => {
+            // Close the menu when scrolling
+            if (isMenuOpen) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup the event listener when component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [isMenuOpen]); // Dependency array includes isMenuOpen to ensure the latest state is used
+
     return (
         <div className={`${styles.burgerMenuContainer} ${isMenuOpen ? styles.open : ''}`}>
             <div

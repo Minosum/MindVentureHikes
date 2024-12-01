@@ -1,0 +1,13 @@
+.joinButton {
+    background-color: #0d652d;
+    border-radius: 21px;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size: medium;
+}
+
+.joinButton:hover {
+    cursor: pointer;
+}
