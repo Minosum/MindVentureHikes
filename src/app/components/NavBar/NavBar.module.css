@@ -14,7 +14,7 @@
 .navMessageContainer {
     display: flex;
     width: 100%;
-
+    justify-content: center;
 }
 
 .socials {
@@ -25,7 +25,7 @@
     position: absolute;
     bottom: 150px;
     width: 100%;
-    
+
 }
 
 .titleAnimation {
@@ -44,18 +44,17 @@
 }
 
 .linkStyles:visited {
-    color: #0D652D;
+    color: white;
 }
 
 .navMessage {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 3rem;
-    width: 50%;
+    width: 60%;
     font-size: 20px;
     line-height: 150%;
     bottom: 15rem;
-    left: 25%;
     border-radius: 5px;
     border: solid 1px #0D652D;
     margin-bottom: 1rem;
@@ -92,23 +91,24 @@
     padding-bottom: 2rem;
 }
 
-@media (max-width: 1000px) {
-    .navMessage {
-        border: none;
+@media (max-width: 1024px) {
+    .joinTripButtonContainer {
+        bottom: 100px;
     }
+
+    .navBar {
+        height: 700px;
+    }
+
     .titleAnimation {
         font-size: 40px;
+        display: none;
     }
 
     .navMessage {
         display: flex;
-        position: relative;
         padding: 2rem;
-        left: 0;
-        right: 0;
-        margin: 0;
-        bottom: 15rem;
-        width: 100%;
+        width: 80%;
     }
 
     .navLinks {
@@ -119,11 +119,15 @@
         display: none;
     }
 
-    .navTitle {
-        font-size: 3rem;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        position: relative;
-        bottom: 12rem;
+    .navMessageContainer {
+        justify-content: center;
     }
+
+    .navTitle {
+        display: none;
+        font-size: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
 }

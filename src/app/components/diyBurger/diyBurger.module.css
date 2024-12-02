@@ -1,0 +1,131 @@
+.navLinksHide,
+.burgerMenuContainer {
+    top: 0;
+    left: 0;
+    height: 0;
+}
+
+.navLinksHide nav {
+    height: 0px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+@media (max-width: 1000px) {
+    .burgerMenuContainer {
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        height: 50px;
+        background-color: #0d652dab;
+    }
+
+    .burgerContainer {
+        display: flex;
+        justify-content: right;
+    }
+
+    .burgerMenuContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .logoContainer {
+        z-index: 11;
+    }
+
+    .burgerIcon {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .burgerLine {
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        margin: 3px 0;
+        transition: all 0.3s ease;
+    }
+
+    .burgerMenu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 12;
+    }
+
+    .navLinksShow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        z-index: 10;
+        animation: slideOpen 0.5s ease-out forwards;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .navLinksHide {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        z-index: 10;
+        animation: slideClose 0.5s ease-out forwards;
+        height: 0vh;
+        overflow: hidden;
+    }
+
+    .navLinksShow::-webkit-scrollbar {
+        display: none;
+    }
+
+    .open .burgerLine:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    .open .burgerLine:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    .open .burgerLine:nth-child(3) {
+        transform: rotate(45deg) translate(-7px, -8px);
+    }
+
+
+    @keyframes slideOpen {
+        0% {
+            height: 0vh;
+            opacity: 0;
+        }
+
+        100% {
+            height: 100vh;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideClose {
+        0% {
+            height: 100vh;
+            opacity: 1;
+        }
+
+        100% {
+            height: 0vh;
+            opacity: 0;
+        }
+    }
+}

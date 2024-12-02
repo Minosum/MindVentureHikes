@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import NavBar from "./components/NavBar/NavBar";
 import BurgerMenu  from "./components/BurgerMenu/BurgerMenu";
 import './globals.css'
+import DiyBurger from "./components/diyBurger/DiyBurger";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <BurgerMenu />
+        <DiyBurger />
+        {/* <BurgerMenu /> */}
         <NavBar />
         {children}
       </body>
