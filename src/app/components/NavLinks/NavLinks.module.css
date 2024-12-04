@@ -1,16 +1,11 @@
 .navLinks {
     display: flex;
     gap: 3rem;
-    position: absolute;
-    bottom: 0rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
     justify-content: center;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
     align-items: center;
+    padding: 20px 60px 20px 20px;
+    flex-wrap: wrap;
 }
 
 .navLinks a {
@@ -20,6 +15,8 @@
     transition: color 0.3s;
     border-left: solid 10px #0D652D;
     padding-left: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+
 }
 
 .navLinks a:hover {
@@ -27,9 +24,16 @@
     text-decoration: underline;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
+    .navLinks a {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
     .navLinks {
         flex-direction: column;
         bottom: 50%;
+        padding: 0;
     }
 }

@@ -1,7 +1,5 @@
-/* Modal styles */
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +11,6 @@
 
 .modal.open {
     display: block;
-    /* Display when modal is open */
 }
 
 .joinOurTrip {
@@ -22,13 +19,16 @@
     outline: none;
     border: none;
     color: white;
-    padding: 8px 16px;
+    padding: 12px 16px;
     font-size: medium;
     font-weight: bold;
+    
 }
 
 .joinOurTrip:hover {
     cursor: pointer;
+    opacity: .9;
+    transition: 0.3s;
 }
 
 .buttonNone {
@@ -59,7 +59,7 @@
     right: 10px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
 
     .modalContent {
         display: flex;

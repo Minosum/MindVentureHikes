@@ -3,6 +3,11 @@
     top: 0;
     left: 0;
     height: 0;
+    opacity: 0;
+}
+
+.navLinksShow {
+    display: none;
 }
 
 .navLinksHide nav {
@@ -12,13 +17,14 @@
     opacity: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .burgerMenuContainer {
         display: flex;
         color: white;
         justify-content: space-between;
         height: 50px;
-        background-color: #0d652dab;
+        background-color:  #11833aab;
+        opacity: 1;
     }
 
     .burgerContainer {
@@ -30,7 +36,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 20px;
     }
 
     .logo {
@@ -50,7 +56,7 @@
 
     .burgerLine {
         width: 20px;
-        height: 3px;
+        height: 2px;
         background-color: white;
         margin: 3px 0;
         transition: all 0.3s ease;
@@ -64,15 +70,13 @@
     }
 
     .navLinksShow {
+        display: flex;
         position: fixed;
+        justify-content: center;
         top: 0;
-        left: 0;
         width: 100%;
         background-color: black;
-        z-index: 10;
         animation: slideOpen 0.5s ease-out forwards;
-        height: 100vh;
-        overflow: hidden;
     }
 
     .navLinksHide {
@@ -92,7 +96,7 @@
     }
 
     .open .burgerLine:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 5px);
+        transform: rotate(-45deg) translate(-4px, 4px);
     }
 
     .open .burgerLine:nth-child(2) {
@@ -101,7 +105,7 @@
     }
 
     .open .burgerLine:nth-child(3) {
-        transform: rotate(45deg) translate(-7px, -8px);
+        transform: rotate(45deg) translate(-7px, -7px);
     }
 
 
