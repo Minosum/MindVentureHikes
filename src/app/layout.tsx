@@ -3,6 +3,8 @@ import NavBar from "./components/NavBar/NavBar";
 import BurgerMenu  from "./components/BurgerMenu/BurgerMenu";
 import './globals.css'
 import DiyBurger from "./components/diyBurger/DiyBurger";
+import InstagramPosts from "./components/InstagramCarousel/InstagramPosts";
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,6 +22,8 @@ export default function RootLayout({
         <DiyBurger />
         {/* <BurgerMenu /> */}
         <NavBar />
+        <InstagramPosts />
+
         {children}
       </body>
     </html>

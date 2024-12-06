@@ -1,0 +1,45 @@
+------------------------------------------------------
+
+***App Details***
+
+Instagram app name
+mindventureapp-IG
+
+
+Instagram app ID
+631347195990072
+
+Instagram app secret
+58a95c88e4d00c9964656e097499f1b6
+
+
+--------------------------------------------------------
+
+***Access Tokens***
+
+Access Token (original - expires in 1 hour - 06 Dec 2024)
+EAAWZBxp0bZBfQBOywFFRMWaz0LZAGgOgvBwmjaCjzj2Fhc26SmNlq1xwAzZCIY95ZCuFw6z7J9qEFZAxgkxd6kv4OEbFnql3pM1DxNR7TNvPGtZC2G3oyaLkcWKBssRgtaR2NTQzBcjp3ZC6ZAtZB57A5enk1ubJtM1G9sfx4aA7h1GknI6FHyQSh6VNlH5ZBp1vJFEPidTfV9AV57vyH3efwZDZD
+
+
+Access Token (extended - expires 04 Feb 2025)
+EAAWZBxp0bZBfQBOZBVZBQIDy54xvVqJVZAove8z61xF5XtIfdGHor0ZC88xjeOyPCkvKmoMM17JJuciDiDmyTIhZBrCkMOdqG1IxO0W4O6g8tHGwV9ofkKnQvAf63EWTdhdvDSl5b9H1k5BIuKzufCzLr2IBQZAQslyASfseNXqRFEf9qlL1Ouv6hoMY
+
+-----------------------------------------------------
+
+
+***Instragram Business account id***
+
+
+{
+  "instagram_business_account": {
+    "id": "17841464642243861"
+  },
+  "id": "498367090027988"
+}
+
+
+
+------------------------------------------------
+
+"name": "Mindventure Hikes",
+      "id": "498367090027988",

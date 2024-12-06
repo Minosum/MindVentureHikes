@@ -1,0 +1,100 @@
+/* Spinner container */
+.spinnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3; /* Light background during loading */
+}
+
+/* Spinner styling */
+.spinner {
+    border: 8px solid #f3f3f3; /* Light gray background */
+    border-top: 8px solid #3498db; /* Blue spinner color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Existing container styling */
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Error message */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Horizontal scrollable carousel */
+.carousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+    scroll-behavior: smooth; /* Smooth scrolling for better UX */
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #0d652dab rgb(255, 255, 255);
+
+}
+
+/* Card for each post */
+.card {
+    flex: 0 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure equal spacing */
+    height: 400px; /* Fixed height to keep cards consistent */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Caption styling */
+.caption {
+    font-size: 13px;
+    color: #ffffff;
+    text-align: center;
+    overflow: scroll; /* Ensure text doesn’t overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    white-space: normal; /* Allow wrapping of text */
+    height: 100%;;
+}
+
+/* Media styling */
+.media {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    max-height: 380px; /* Set a max height for images/videos */
+    object-fit: cover; /* Ensure the content scales properly */
+}
+
+/* Timestamp styling */
+.timestamp {
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: auto; /* Push the timestamp to the bottom */
+}
