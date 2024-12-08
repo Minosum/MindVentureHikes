@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import { Navigation, Pagination, FreeMode } from "swiper/modules";
 import styles from "./InstagramPosts.module.css";
 import { GoLink } from "react-icons/go";
-import { MdOutlineChatBubbleOutline } from "react-icons/md";
 import Modal from "../Modal/Modal";
 
 
