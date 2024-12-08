@@ -117,3 +117,10 @@
         padding-bottom: 1rem;
     }
 }
+
+@media (max-width: 375px) {
+    .navMessageContainer {
+        margin: 60px 0px;
+    }
+}
+
