@@ -1,0 +1,29 @@
+.navMessageContainer {
+    display: flex;
+    justify-content: center;
+    /* margin: 50px 50px; */
+    background: linear-gradient(to bottom, 
+    rgba(13, 101, 45, 0.5),  /* Starting color */
+    rgba(13, 101, 45, 0.6) 50%,  /* Maintain original color in middle */
+    rgba(0, 0, 0, 1) 100%  /* Transition to black */
+  );
+  background-size: cover;
+  background-position: center;
+}
+
+.navMessage {
+    text-align: center;
+    padding: 5rem;
+    width: 60%;
+    font-size: 20px;
+    line-height: 150%;
+    border-radius: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navMessageContainer {
+        display: none;
+    }
+}

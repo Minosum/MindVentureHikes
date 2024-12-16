@@ -15,17 +15,15 @@ const NavBar = () => {
                     <p className={styles.navMessage}>MindVenture is where adventure meets connection. Through hiking, wellness and charity initiatives, we inspire people to explore nature, connect with others, and give back to communities in need. Together, let’s make a difference and create unforgettable journeys.</p>
                 </div>
                 <div className={styles.joinTripButtonContainer}>
-                    <ModalForm
+                    {/* <ModalForm
                         iframeSrc="https://docs.google.com/forms/d/e/1FAIpQLSehOYe_vgiQ0s8Qk7UM36n7pX2aL78qhd2XgN5DWtxacnmfNA/viewform?embedded=true"
-                    />
-                    <div className={styles.socials}>
+                    /> */}
+                    {/* <div className={styles.socials}>
                         <Link className={styles.linkStyles} target="_blank" href="https://www.instagram.com/mindventurehikes/">
-                        <RiInstagramFill size={30} /></Link>
-                        
-                    </div>
+                            <RiInstagramFill size={30} /></Link>
 
+                    </div> */}
                 </div>
-
                 <div className={styles.navBarLinks}>
                     <NavLinks />
                 </div>

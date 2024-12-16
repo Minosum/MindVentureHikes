@@ -4,6 +4,9 @@ import BurgerMenu  from "./components/BurgerMenu/BurgerMenu";
 import './globals.css'
 import DiyBurger from "./components/diyBurger/DiyBurger";
 import InstagramPosts from "./components/InstagramCarousel/InstagramPosts";
+import HeroMessage from "./components/HeroMessage/HeroMessage";
+import TourCards from "./components/TourCard/TourCard";
+import ToursSection from "./components/ToursSection/ToursSection";
 
 
 export const metadata: Metadata = {
@@ -22,8 +25,9 @@ export default function RootLayout({
         <DiyBurger />
         {/* <BurgerMenu /> */}
         <NavBar />
-        <InstagramPosts />
-
+        <HeroMessage />
+        {/* <InstagramPosts /> */}
+        <ToursSection/>
         {children}
       </body>
     </html>

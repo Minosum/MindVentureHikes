@@ -1,0 +1,20 @@
+.toursSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+   
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .toursSection {
+        margin-top: 2rem;
+    }
+  }
