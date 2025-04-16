@@ -1,0 +1,19 @@
+.joinUsContainer {
+    background-color: white;
+    padding: 48px 30px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+
+.joinUsContainer p {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.joinUsTitle {
+    font-size: 24px;
+    margin-bottom: 32px;
+    font-weight: bold;
+}

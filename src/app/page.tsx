@@ -1,6 +1,7 @@
 import NavBar from "./components/NavBar/NavBar";
 import ToursSection from "./components/ToursSection/ToursSection";
 import { pageData } from '@/app/data/pageData'
+import JoinUs from "./components/JoinUs/JoinUs";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
 
             {/* <InstagramPosts /> */}
             <ToursSection />
+            <JoinUs />
         </>
     );
 }

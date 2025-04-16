@@ -14,6 +14,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ closeMenu }) => {
             <Link href="/our-story" onClick={closeMenu}>Our Story</Link>
             <Link href="/what-we-do" onClick={closeMenu}>What We Do</Link>
             <Link href="/our-values" onClick={closeMenu}>Our Values</Link>
+            <Link href="/why-choose-us" onClick={closeMenu}>Why Choose Us</Link>
         </nav>
     )
 }

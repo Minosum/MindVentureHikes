@@ -10,12 +10,12 @@ const ToursSection: React.FC = () => {
       <TourCard
         image={Image}
         title="Mt Ararat Summit Hike"
-        location="Victoria"
+        location="Eastern Turkey"
         startDate="July"
         endDate="August"
         grade={5}
         price={1400}
-        viewTripUrl="https://www.hearttohati.org/events"
+        viewTripUrl=""
       />
     </section>
   );
