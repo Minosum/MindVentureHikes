@@ -5,10 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Navigation, Pagination, FreeMode } from "swiper/modules";
+import { Navigation, FreeMode } from "swiper/modules";
 import styles from "./InstagramPosts.module.css";
 import { GoLink } from "react-icons/go";
 import Modal from "../Modal/Modal";
+import Image from "next/image";
 
 
 type InstagramPost = {
@@ -22,8 +23,8 @@ type InstagramPost = {
 
 const InstagramPosts: React.FC = () => {
     const [posts, setPosts] = useState<InstagramPost[]>([]);
-    const [error, setError] = useState<string | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
+    const [error] = useState<string | null>(null);
+    const [isLoading] = useState(true);
 
     const userId = process.env.NEXT_PUBLIC_INSTAGRAM_USER_ID;
     const accessToken = process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN;
@@ -31,18 +32,12 @@ const InstagramPosts: React.FC = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             const url = `https://graph.facebook.com/v21.0/${userId}/media?fields=id,caption,media_type,media_url,timestamp,permalink&access_token=${accessToken}`;
-            try {
                 const response = await fetch(url);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
                 setPosts(data.data || []);
-            } catch (err) {
-                setError("Failed to fetch Instagram posts");
-            } finally {
-                setIsLoading(false);
-            }
         };
 
         fetchPosts();
@@ -79,7 +74,7 @@ const InstagramPosts: React.FC = () => {
                         <div className={styles.card}>
                             {post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM" ? (
                                 <>
-                                <img
+                                <Image
                                     src={post.media_url}
                                     alt={"Instagram Post"}
                                     className={styles.media}

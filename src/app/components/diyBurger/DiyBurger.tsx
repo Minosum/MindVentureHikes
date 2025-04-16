@@ -1,9 +1,10 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './diyBurger.module.css'
 import NavLinks from '../NavLinks/NavLinks';
 import logo from '../../assets/mindventureLogo.png'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const DiyBurger = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +25,9 @@ const DiyBurger = () => {
                             alt="Logo of Mindventure"
                         />
                     </div>
-                    <p className={styles.logo}><a href="/" className={styles.noStyleLink}>Mindventure Hikes</a></p>
+                </div>
+                <div>
+                <Link href="/" className={styles.noStyleLink}>Mindventure Hikes</Link>
                 </div>
                 <div className={styles.burgerMenu} >
                     {/* <div className={styles.menu}>
