@@ -20,29 +20,25 @@
 .noStyleLink {
     text-decoration: none;
     color: white;
+    font-size: large;
 }
 
 @media (max-width: 768px) {
     .burgerMenuContainer {
         display: flex;
         color: white;
-        justify-content: space-between;
+        justify-content: space-around;
         height: 50px;
         background-color:  #065f46; 
         opacity: 1;
+        align-items: center;
+        padding: 15px;
+        position: sticky;
     }
 
     .burgerContainer {
         display: flex;
         justify-content: right;
-    }
-
-    .burgerMenuContainer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        position: sticky;
     }
 
     .logo {
@@ -52,7 +48,7 @@
 
     .logoContainer {
         display: flex;
-        gap: 30px;
+        gap: 20px;
         z-index: 11;
         align-items: center;
     }
@@ -105,7 +101,8 @@
     }
 
     .burgerMenuContainerOpen {
-        position: relative;
+        position: sticky;
+        z-index: 10000;
     }
     
     .open .burgerLine:nth-child(1) {

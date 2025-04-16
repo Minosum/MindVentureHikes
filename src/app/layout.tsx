@@ -5,6 +5,9 @@ import DiyBurger from "./components/diyBurger/DiyBurger";
 
 export const metadata: Metadata = {
     title: "Mindventure Hikes",
+    icons: {
+        icon: "/mindventureLogo.png"
+    }
 };
 
 export default function RootLayout({

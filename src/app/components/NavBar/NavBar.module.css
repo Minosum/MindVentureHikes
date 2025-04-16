@@ -139,7 +139,6 @@
         display: flex;
         gap: 30px;
         flex-direction: column;
-        justify-content: flex-end;
     }
 
     .navMessageContainer {
