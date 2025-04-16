@@ -18,12 +18,13 @@
 
 .tourCardContent {
   padding: 16px;
+  text-align: center;
 }
 
 .tourCardTitle {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 32px;
   
 }
 
@@ -37,13 +38,14 @@
 
 .tourCardPricing {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .tourCardActions {
   display: flex;
-  justify-content: space-between;
-  margin-top: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 .tourCardViewTrip,
@@ -56,7 +58,7 @@
 }
 
 .tourCardViewTrip {
-  background-color: #0d652d;
+  background-color: #065f46;
   color: #fff;
 }
 
@@ -79,5 +81,6 @@
   .tourCardContent {
     flex: 1;
     padding: 16px;
+    padding-top: 32px;
   }
 }

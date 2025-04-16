@@ -17,13 +17,18 @@
     opacity: 0;
 }
 
+.noStyleLink {
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .burgerMenuContainer {
         display: flex;
         color: white;
         justify-content: space-between;
         height: 50px;
-        background-color:  #11833aab;
+        background-color:  #065f46; 
         opacity: 1;
     }
 
@@ -36,7 +41,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding: 15px;
+        position: sticky;
     }
 
     .logo {
@@ -45,7 +51,10 @@
     }
 
     .logoContainer {
+        display: flex;
+        gap: 30px;
         z-index: 11;
+        align-items: center;
     }
 
     .burgerIcon {
@@ -95,6 +104,10 @@
         display: none;
     }
 
+    .burgerMenuContainerOpen {
+        position: relative;
+    }
+    
     .open .burgerLine:nth-child(1) {
         transform: rotate(-45deg) translate(-4px, 4px);
     }

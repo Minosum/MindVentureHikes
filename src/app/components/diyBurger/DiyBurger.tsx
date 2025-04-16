@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import styles from './diyBurger.module.css'
 import NavLinks from '../NavLinks/NavLinks';
+import logo from '../../assets/mindventureLogo.png'
+import Image from 'next/image';
 
 const DiyBurger = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,16 +11,25 @@ const DiyBurger = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+    const closeMenu = () => setIsMenuOpen(false);
     return (
         <>
-            <div className={styles.burgerMenuContainer}>
+            <div className={`${styles.burgerMenuContainer} ${isMenuOpen ? styles.burgerMenuContainerOpen : ''}`}>
                 <div className={styles.logoContainer}>
-                    <p className={styles.logo}>Mindventure Hikes</p>
+                    <div>
+                        <Image
+                            src={logo}
+                            width={50}
+                            height={50}
+                            alt="Logo of Mindventure"
+                        />
+                    </div>
+                    <p className={styles.logo}><a href="/" className={styles.noStyleLink}>Mindventure Hikes</a></p>
                 </div>
                 <div className={styles.burgerMenu} >
-                    <div className={styles.menu}>
+                    {/* <div className={styles.menu}>
                         <p>MENU</p>
-                    </div>
+                    </div> */}
                     <div className={`${styles.burgerIcon} ${isMenuOpen ? styles.open : ''}`}
                         onClick={toggleMenu}>
                         <div className={styles.burgerLine}></div>
@@ -29,7 +40,7 @@ const DiyBurger = () => {
 
             </div>
             <div className={`${isMenuOpen ? styles.navLinksShow : styles.navLinksHide}`}>
-                <NavLinks />
+                <NavLinks closeMenu={closeMenu}/>
             </div>
         </>
 

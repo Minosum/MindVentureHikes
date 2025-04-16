@@ -1,0 +1,76 @@
+.footer {
+    background-color: #065f46;
+    color: white;
+    padding: 48px 0;
+    text-align: center;
+  }
+  
+  .footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  .footerTitle {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  
+  .footerCopyright {
+    margin-bottom: 24px;
+  }
+  
+  .footerEmail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+ 
+  }
+  
+  .emailLink {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    gap: 16px;
+  }
+  
+  .emailLink:hover {
+    text-decoration: underline;
+  }
+  
+  .icon {
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footerSocial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .socialIcon {
+    color: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+  }
+  
+  .socialIcon:hover {
+    color: #8eeaea; /* Lighter teal for hover effect */
+  }
+  
+  /* Make sure SVG icons have the right size */
+  .socialIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+  

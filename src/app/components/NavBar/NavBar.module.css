@@ -65,20 +65,27 @@
 
 @media (max-width: 768px) {
     .navMessage {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.7);
         margin: 1rem;
-        padding: 1rem;
-        font-size: 20px;
+        padding: 1.2rem;
+        font-size: 18px;
         line-height: 150%;
         border-radius: 5px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        padding-bottom: 3rem;
+    }
 
+    .navMessage h1 {
+        font-size: 28px;
+        padding: 2rem;
+        font-weight:bold;
     }
 
     .navMessageContainer {
         display: flex;
         justify-content: center;
         margin: 0;
+
     }
 
     .joinTripButtonContainer {
@@ -86,7 +93,7 @@
     }
 
     .navBar {
-        height: 700px;
+        /* height: auto; */
     }
 
     .titleAnimation {
@@ -121,9 +128,8 @@
 
     .navBarContainer {
         display: flex;
-        gap: 150px;
+        justify-content: center;
         flex-direction: column;
-        justify-content: flex-end;
     }
 
 }

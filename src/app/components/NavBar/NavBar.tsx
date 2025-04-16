@@ -1,28 +1,42 @@
 import React from 'react'
 import styles from './NavBar.module.css'
 import NavLinks from '../NavLinks/NavLinks'
-import ModalForm from '../ModalForm/ModalForm'
-import { RiInstagramFill } from "react-icons/ri";
-import Link from 'next/link';
-const NavBar = () => {
+
+interface ValueItem {
+    title: string;
+    description: string;
+}
+
+interface NavBarProps {
+    heading: string;
+    description: string | ValueItem[]; // Now accepts array of { title, description }
+    descriptionTwo?: string;
+    style?: React.CSSProperties;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ heading, description, descriptionTwo }) => {
 
     return (
         <header className={styles.navBar}>
             <div className={styles.navBarContainer}>
-                {/* <h1 className={styles.titleAnimation}>WELCOME TO<br></br></h1> */}
                 <h1 className={styles.navTitle}>Mindventure <br></br> Hikes</h1>
                 <div className={styles.navMessageContainer}>
-                    <p className={styles.navMessage}>MindVenture is where adventure meets connection. Through hiking, wellness and charity initiatives, we inspire people to explore nature, connect with others, and give back to communities in need. Together, let’s make a difference and create unforgettable journeys.</p>
-                </div>
-                <div className={styles.joinTripButtonContainer}>
-                    {/* <ModalForm
-                        iframeSrc="https://docs.google.com/forms/d/e/1FAIpQLSehOYe_vgiQ0s8Qk7UM36n7pX2aL78qhd2XgN5DWtxacnmfNA/viewform?embedded=true"
-                    /> */}
-                    {/* <div className={styles.socials}>
-                        <Link className={styles.linkStyles} target="_blank" href="https://www.instagram.com/mindventurehikes/">
-                            <RiInstagramFill size={30} /></Link>
-
-                    </div> */}
+                    <div className={styles.navMessage}>
+                        <h1>{heading}</h1>
+                        <div className='descriptionTwo'>
+                        <p>{descriptionTwo}</p>
+                        </div>
+                        {Array.isArray(description) ? (
+                            description.map((item, index) => (
+                                <div className='descriptionContainer' key={index}>
+                                    <h2 className='title'>{item.title}</h2>
+                                    <p className='description'>{item.description}</p>
+                                </div>
+                            ))
+                        ) : (
+                            <p>{description}</p>
+                        )}
+                    </div>
                 </div>
                 <div className={styles.navBarLinks}>
                     <NavLinks />
